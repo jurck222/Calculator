@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="431.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.naloga2.HelloController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Datoteka">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#odpri" text="Odpri">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#shrani" text="Shrani">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#izhod" text="Izhod">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="I" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Uredi">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#pocisti" text="Počisti">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Pomoč">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#pomoc" text="Avtor">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <ToolBar prefHeight="43.0" prefWidth="311.0" BorderPane.alignment="CENTER">
+         <items>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
+            <Button mnemonicParsing="false" onAction="#odpri" text="Odpri" />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
+            <Button mnemonicParsing="false" onAction="#shrani" text="Shrani" />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
+            <Button mnemonicParsing="false" onAction="#pocisti" text="Počisti" />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
+            <Button mnemonicParsing="false" onAction="#izhod" text="X" />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
+            <Label fx:id="status" />
+         </items></ToolBar>
+   </bottom>
+   <center>
+      <Accordion prefHeight="380.0" prefWidth="311.0" BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" contentDisplay="CENTER" text="Kalkulator">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="251.0" prefWidth="430.0">
+                     <children>
+                        <GridPane layoutX="121.0" layoutY="48.0" prefHeight="183.0" prefWidth="166.0">
+                          <columnConstraints>
+
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="28.4" minHeight="10.0" prefHeight="28.4" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="43.4" minHeight="10.0" prefHeight="32.4" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.39999999999999" minHeight="10.0" prefHeight="30.39999999999999" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#gumb" prefHeight="26.0" prefWidth="52.0" text="+" />
+                              <Button mnemonicParsing="false" onAction="#gumb" prefHeight="26.0" prefWidth="52.0" text="-" GridPane.columnIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#gumb" prefHeight="25.6" prefWidth="52.0" text="*" GridPane.columnIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#gumb" prefWidth="52.0" text="/" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#eval" prefWidth="52.0" text="=" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#gumb" prefWidth="52.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#gumb" prefWidth="52.0" text="1" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#gumb" prefWidth="52.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#gumb" prefWidth="52.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#gumb" prefWidth="52.0" text="4" GridPane.rowIndex="3" />
+                              <Button mnemonicParsing="false" onAction="#gumb" prefWidth="52.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Button mnemonicParsing="false" onAction="#gumb" prefWidth="52.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#gumb" prefWidth="52.0" text="7" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                              <Button mnemonicParsing="false" onAction="#gumb" prefWidth="52.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Button mnemonicParsing="false" onAction="#gumb" prefWidth="52.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Button mnemonicParsing="false" onAction="#clear" prefWidth="52.0" text="C" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                        <TextField fx:id="zaslon" layoutX="122.0" layoutY="14.0" prefHeight="26.0" prefWidth="165.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" prefHeight="350.0" prefWidth="31.0" text="Zgodovina">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="dnevnik" layoutX="-4.0" prefHeight="324.0" prefWidth="437.0" />
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Dnevnik">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="hist" layoutX="-4.0" layoutY="-1.0" prefHeight="326.0" prefWidth="437.0" />
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </center>
+</BorderPane>
